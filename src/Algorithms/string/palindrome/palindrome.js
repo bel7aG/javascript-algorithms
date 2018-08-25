@@ -8,13 +8,22 @@ let palindrome = (current) => {
   }
 
   let revStr = '';
-  for (let i = current.length; i !== 0; i--) {
-    revStr = revStr + current[i];
+  for (let i = 0; i < current.length; i++) {
+    revStr = current[i] + revStr;
   }
   return current === revStr ? 'Palindrom' : 'not Palindrome';
-                           /*    true     :     false      */
 };
 
-console.log(palindrome('radar'));
+console.log(palindrome('poop'));
+console.log(palindrome('zzs'));
 console.log(palindrome(''));
-console.log(palindrome('z'));
+console.log(`${palindrome('A')}\n`);
+
+/* Solution: 2 */
+palindrome = (currentString) => (
+  currentString.split('').every((char, index) => char === currentString[currentString.length - index - 1])
+);
+
+console.log(palindrome('poop'));
+console.log(palindrome('zzs'));
+console.log(palindrome(''));
