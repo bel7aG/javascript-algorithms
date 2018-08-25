@@ -19,3 +19,6 @@ reverse = (string) => {
 console.log(reverse('gvs'));
 
 /* Solution: 3 */
+
+reverse = (string) => string.split('').reduce((reversedAcc, character) => character + reversedAcc, '');
+console.log(reverse('radarr'));
