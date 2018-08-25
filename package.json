@@ -1,0 +1,15 @@
+{
+  "name": "Algorithims",
+  "version": "1.0.0",
+  "description": "Javascript Algorithms",
+  "main": "index.js",
+  "repository": "git@github.com:bel7aG/javascript-algorithms.git",
+  "author": "belhassen Gharsallah",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
