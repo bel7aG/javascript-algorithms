@@ -22,3 +22,8 @@ console.log(reverse('gvs'));
 
 reverse = (string) => string.split('').reduce((reversedAcc, character) => character + reversedAcc, '');
 console.log(reverse('radarr'));
+
+
+/* Solution: 4 ==> the new reduceRight Mothod must Love it*/
+reverse = (string) => string.split('').reduceRight((acc, currentValue) => acc + currentValue, '')
+console.log(reverse('poopp'));
