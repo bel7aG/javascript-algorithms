@@ -12,6 +12,7 @@ let palindrome = (current) => {
     revStr = revStr + current[i];
   }
   return current === revStr ? 'Palindrom' : 'not Palindrome';
+                           /*    true     :     false      */
 };
 
 console.log(palindrome('radar'));
