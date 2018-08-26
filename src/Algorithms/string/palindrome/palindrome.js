@@ -23,7 +23,3 @@ console.log(`${palindrome('A')}\n`);
 palindrome = (currentString) => (
   currentString.split('').every((char, index) => char === currentString[currentString.length - index - 1])
 );
-
-console.log(palindrome('poop'));
-console.log(palindrome('zzs'));
-console.log(palindrome(''));
