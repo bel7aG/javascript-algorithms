@@ -1,9 +1,6 @@
-/* Solution */
-const reverseInt = (currentValue) => {
-  return Number(currentValue.toString().split('').reverse().join(''));
-}
+/* Solution: 1  ==> one line */
+let reverseInt = (x) => (
+  parseInt(x.toString().split('').filter((char) => char !== '-').reverse().join(''), 10) * Math.sign(x);
+);
 
-const myInt = reverseInt(23);
-
-console.log(myInt);
-console.log(typeof(myInt))
+console.log(reverseInt(-12));
