@@ -1,8 +1,9 @@
 /* Solution 1 */
-let maxChar = (str) => {
-  for (let char of str) {
-    console.log(char);
-  }
-}
+const a = {
+  a: 1,
+  b: 2,
+  c: 0,
+  v: 'ok'
+};
 
-maxChar('bel7aG');
+console.log(undefined + 1);
