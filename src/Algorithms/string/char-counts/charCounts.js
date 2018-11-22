@@ -1,9 +1,9 @@
 /* Method 1: no matter if it is a lower or upper cases and Numbers */
 const charCountsOne = (str) => {
   if (str) {
-    let obj = {}, char, isOkey
-    for (let i = 0; i < str.length; i++) {
-      char = str[i]
+    let obj = {}, isOkey = false
+    char = ''
+    for (let char of str) {
       isOkey = (
           (char.charCodeAt() >= 48 && char.charCodeAt() <= 57) ||
           (char.charCodeAt() >= 65 && char.charCodeAt() <= 90) ||
@@ -19,8 +19,8 @@ const charCountsOne = (str) => {
   }
   return `Empty String`
 }
-
-console.log(charCountsOne(`Belhassen &&&& * $ Gharsallah     # ' " bel7aG OH YEAH`))
+let myString = '1234'
+console.log(charCountsOne(myString))
 
 console.log('\n\n\n\n')
 
@@ -28,10 +28,10 @@ console.log('\n\n\n\n')
 
 const charCountsTwo = (str) => {
   if (str) {
-    let obj = {}, char
-    for (let i = 0; i < str.length; i++) {
-      char = str[i].toLowerCase()
+    let obj = {}
+    for (let char of str) {
       if (obj[char] > 0) {
+        char = char.toLowerCase()
         obj[char]++
       } else if (char.match(/[a-z0-9]/)){
         obj[char] = 1
