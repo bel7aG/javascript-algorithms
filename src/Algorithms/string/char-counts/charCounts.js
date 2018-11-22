@@ -1,11 +1,18 @@
 const charCounts = (str) => {
   if (str.length) {
-    let obj = {}, char
+
+    let obj = {}, char, isOkey
+
     for (let i = 0; i < str.length; i++) {
       char = str[i].toLowerCase()
+      isOkey = (
+          (char.charCodeAt() >= 48 && char.charCodeAt() <= 57) ||
+          (char.charCodeAt() >= 65 && char.charCodeAt() <= 90) ||
+          (char.charCodeAt() >= 97 && char.charCodeAt() <= 122)
+      )
       if (obj[char] > 0) {
         obj[char]++
-      } else {
+      } else if (isOkey){
         obj[char] = 1
       }
     }
@@ -14,7 +21,7 @@ const charCounts = (str) => {
   return `Empty String`
 }
 
-console.log(charCounts(`Belhassen Gharsallah bel7aG OH YEAH`))
+console.log(charCounts(`Belhassen &&&& * $ Gharsallah     # ' " bel7aG OH YEAH`))
 
 /*  Syntax    */
 
